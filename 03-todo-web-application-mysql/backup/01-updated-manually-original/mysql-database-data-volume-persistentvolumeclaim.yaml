@@ -3,7 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.group: todo-web-application
     io.kompose.service: mysql-database-data-volume
   name: mysql-database-data-volume
 spec:

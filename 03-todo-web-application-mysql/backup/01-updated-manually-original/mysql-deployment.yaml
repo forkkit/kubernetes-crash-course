@@ -1,22 +1,16 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.group: todo-web-application
     io.kompose.service: mysql
   name: mysql
 spec:
   replicas: 1
   strategy:
     type: Recreate
-  selector:
-    matchLabels:
-      io.kompose.group: todo-web-application
-      io.kompose.service: mysql
   template:
     metadata:
       labels:
-        io.kompose.group: todo-web-application
         io.kompose.service: mysql
     spec:
       containers:
